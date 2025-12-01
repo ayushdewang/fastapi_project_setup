@@ -6,6 +6,9 @@ from app.api.deps import get_current_user, get_db
 from app.core.security import get_hash_pw
 from app.models.user_model import User
 from app.schemas.user_schema import UserRead, UserUpdate
+import logging
+
+logger = logging.getLogger(__name__)
 
 router = APIRouter(prefix="/users", tags=["users"])
 

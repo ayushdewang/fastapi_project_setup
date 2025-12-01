@@ -3,9 +3,13 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.api.routes import api_router
+from app.core.logging_config import LOGGING_CONFIG
 from app.db.base import Base
 from app.core.config import get_settings
 from app.db.session import engine
+import logging.config
+
+logging.config.dictConfig(LOGGING_CONFIG)
 
 settings = get_settings()
 
@@ -31,6 +35,7 @@ def create_app() -> FastAPI:
    
 
     return app
+
 
 
 app = create_app()

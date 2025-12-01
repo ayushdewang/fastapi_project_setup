@@ -8,6 +8,9 @@ from app.core.security import create_access_token, create_refresh_token, decode_
 from app.models.user_model import User
 from app.schemas.user_schema import Token, UserCreate
 from app.services.user_service import create_user, authenticate_user
+import logging
+
+logger = logging.getLogger(__name__)
 
 router = APIRouter(prefix="/auth", tags=["auth"])
 

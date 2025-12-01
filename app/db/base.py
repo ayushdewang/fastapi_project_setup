@@ -1,3 +1,5 @@
-from sqlalchemy.ext.declarative import declarative_base
 
-Base = declarative_base()
+from app.db.session import Base
+
+# Import all models here
+from app.models.user_model import User

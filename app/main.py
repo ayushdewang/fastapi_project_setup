@@ -34,4 +34,4 @@ def create_app() -> FastAPI:
 
 
 app = create_app()
-Base.metadata.create_all(engine)
+# Base.metadata.create_all(engine)
